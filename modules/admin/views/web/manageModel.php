@@ -84,7 +84,7 @@
 <style>
     #modifmodel3 a{line-height: 16px;padding-left: 8px;padding-right: 8px;font-size: 12px;padding-top: 2px;padding-bottom: 2px;background: none;}
     .adminzone .adminzonemenu #modifmodel3 .adminzonetab a:hover{background: none !important;}
-    .adminzonetab:hover{background: #999 !important;}
+    .adminzonetab:hover{background: #e4e4e4 !important}
     #modifmodel3 .adminzonetab:hover span.ui-icon-closethick {display: block;margin: -1px 2px 0px 0px;border: #666 solid 1px;border-radius: 5px;cursor: pointer;}
     #modifmodel3 span.ui-icon-closethick {display: none;}
 </style>
