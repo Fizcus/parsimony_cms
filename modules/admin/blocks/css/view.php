@@ -69,17 +69,20 @@ $selectors = $css->getAllSselectors();
             <div id="switchtovisuel" class="active">Visuel</div>
             <div id="switchtocode">Code</div>
         </div>
-        <select placeholder="#Example" name="selector" placeholder="CSS Property" class="autocomplete" id="current_selector_update">
-            <option></option>
-            <?php
-            if (!empty($selectors)):
-                foreach ($selectors AS $option):
-                    ?>
-                    <option><?php echo $option; ?></option>
-                <?php endforeach;
-            endif;
-            ?>
-        </select>
+	<div style="background-image: -webkit-gradient(linear,right bottom, left bottom,from(#E5E9EF),to(#FEFEFE));border-top: 1px solid #c1c1c1">
+	    <div id="csspicker" style="padding: 2px;width: 20px;display: inline-block;position: relative;vertical-align: top;"><img style="position: absolute;top: 9px" src="<?php echo BASE_PATH . 'admin/img/picker.png'; ?>" title="<?php echo t('CSSPicker', FALSE); ?>"/></div>
+	    <select placeholder="#Example" name="selector" placeholder="CSS Property" style="width: 100px;display: inline-block;border-top: 0" class="autocomplete" id="current_selector_update">
+		<option></option>
+		<?php
+		if (!empty($selectors)):
+		    foreach ($selectors AS $option):
+			?>
+			<option><?php echo $option; ?></option>
+		    <?php endforeach;
+		endif;
+		?>
+	    </select>
+	</div>
         <input type="hidden" id="current_selector_update_prev" />
         <input type="hidden" id="current_stylesheet_nb" />
         <input type="hidden" id="current_stylesheet_nb_rule" />
@@ -90,12 +93,9 @@ $selectors = $css->getAllSselectors();
             </select>
         </div>
         <div id="goeditcss"></div>
-
+	<div id="savemycss" class="none" onclick="$(this).closest('form').trigger('submit')" class="adminbtnrightslide"><img src="<?php echo BASE_PATH; ?>admin/img/savecss.png" style="margin:0px auto;vertical-align: middle;">  <?php echo t('Save'); ?></div>
     </div>
     <div id="css_panel" style="" class="none">
-        <div>
-            <div id="savemycss" onclick="$(this).closest('form').trigger('submit')" class="adminbtnrightslide"><img src="<?php echo BASE_PATH; ?>admin/img/savecss.png" style="margin:0px auto;vertical-align: middle;">  <?php echo t('Save'); ?></div>
-        </div>
         <div id="changecssform" class="clearboth none swicthcsscode">
             <div id="css_menu" class="clearboth">
                 <div class="active" rel="panelcss_tab_general">General</div>
